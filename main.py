@@ -1,4 +1,4 @@
-from player import player_gen, player_dice, win
+from player import player_gen, player_dice, show_winner, win
 from constant import DICE_VALUE
 from checks import exit_game
 import os
@@ -24,7 +24,10 @@ def main():
                 print(f"{player} has rolled {players[player]["dice"]} and scored {players[player]["points"]} points")
                 input("press ENTER to show next player...")
                 os.system("clear")
-     
+
+            show_winner(players)
+
+
             if not exit_game():
                 break
 

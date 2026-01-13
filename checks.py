@@ -13,7 +13,7 @@ def is_a_number(str):
 
 def exit_game():
     while True:
-        play_again = input("Do you want to play again (Y/N)")
+        play_again = input("Do you want to play again (Y/N)\n")
         if play_again.upper() == "N":
             print("good bye")
             return False
@@ -21,6 +21,6 @@ def exit_game():
             print("here we go again")
             return True
         else:
-            print("Need to be Y/N")
+            print("Need to be Y/N \n")
 
         

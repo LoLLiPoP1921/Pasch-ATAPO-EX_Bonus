@@ -23,5 +23,22 @@ def win(dict):
         players[player]["points"] = DICE_VALUE[players[player]["dice"]]
 
     return players
+
+def show_winner(dict):
+    players = dict
+    winner = ""
+    points = 0
+    output = None
+
+    for player in players:
+        if players[player]["points"] == points:
+            output += f"The winner is {player} with {points}.\n {player} rolled : {players[player]["dice"]}\n"
+        if players[player]["points"] > points:
+            winner = player
+            points = players[player]["points"]
+            output = f"The winner is {player} with {points}.\n {player} rolled : {players[player]["dice"]}\n"
+
+    input(output)
+    return
  
 
